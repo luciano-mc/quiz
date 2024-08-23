@@ -99,14 +99,9 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000;
-
-    > p {
-        color: #000;
-    }
+    color: #fff;
 
     .score {
-        color: #fff;
         font-size: 2rem;
         margin: 0;
     }
@@ -118,7 +113,6 @@ export const Wrapper = styled.div`
         font-weight: 500;
         text-align: center;
         margin: 20px;
-        color: #fff;
     }
 
     .start, .next {
@@ -130,7 +124,6 @@ export const Wrapper = styled.div`
         height: 40px;
         margin: 20px 0;
         padding: 0 40px;
-        color: #fff;
         font-weight: 600;
         font-size: 14px;
     }

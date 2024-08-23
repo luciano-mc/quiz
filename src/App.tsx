@@ -85,7 +85,7 @@ function App() {
           </>
         )}
         {gameOver || userAnswers.length === TOTAL_QUESTIONS && !loading ? (
-          <button className="start" onClick={startTrivia}>{gameOver ? 'START' : 'RESTART'}</button>
+          <button className="start" onClick={startTrivia}>{gameOver ? 'Start' : 'Restart'}</button>
         ) : null }
       </Wrapper>
     </>

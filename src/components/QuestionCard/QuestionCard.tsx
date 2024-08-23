@@ -1,11 +1,11 @@
 import { QuestionCardProps } from "@/types/types.ts";
-import { CardWrapper, ButtonWrapper } from './QuestionCard.styles';
+import { ButtonWrapper } from './QuestionCard.styles';
 
 function QuestionCard(props: QuestionCardProps) {
   const { question, answers, callback, userAnswer, questionNr, totalQuestions } = props;
 
   return (
-    <CardWrapper>
+    <div>
       <p className="number">Question: {questionNr} / {totalQuestions}</p>
       <p dangerouslySetInnerHTML={{ __html: question }} />
       <div className="buttons_container">
@@ -15,13 +15,13 @@ function QuestionCard(props: QuestionCardProps) {
             correct={userAnswer?.correctAnswer === answer}
             userClicked={userAnswer?.answer === answer}
           >
-            <button disabled={!!userAnswer} value={answer} onClick={callback}>
+            <button className="card__button" disabled={!!userAnswer} value={answer} onClick={callback}>
               <span dangerouslySetInnerHTML={{ __html: answer }}/>
             </button>
           </ButtonWrapper>
         ))}
       </div>
-    </CardWrapper>
+    </div>
   );
 }
 
